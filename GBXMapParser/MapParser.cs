@@ -38,7 +38,7 @@ namespace GBXMapParser
         /// <param name="bytes">Byte array to parse</param>
         /// <returns>Parsed map information</returns>
         /// <exception cref="GBXException">Thrown when the file could not be parsed properly</exception>
-        public static MapInformation ReadByteArray(byte[] bytes)
+        public static MapInformation ReadBytes(byte[] bytes)
         {
             // Reset the current map information.
             currentMapInformation = null;

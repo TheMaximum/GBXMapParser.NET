@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>GBXMapParser.NET</id>
+	<title>GBXMapParser.NET</title>
+    <version>1.0.0</version>
+    <authors>Max Klaversma</authors>
+    <owners>Max Klaversma</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <projectUrl>https://github.com/TheMaximum/GBXMapParser.NET</projectUrl>
+    <iconUrl>https://smurfen.net/img/maniaplanet_tools.png</iconUrl>
+    <description>ManiaPlanet GBX map parser written in C# for .NET Core.</description>
+	<summary>Parser for ManiaPlanet maps (in GBX format), created in C# for .NET Core.</summary>
+    <copyright>2019 © Max Klaversma</copyright>
+    <tags>ManiaPlanet GBX map parser NETCore</tags>
+    <repository type="GitHub" url="https://github.com/TheMaximum/GBXMapParser.NET" />
+	<releaseNotes>Initial version, allowing parsing map information from a file name, byte array and stream. Will return all available map information, including map thumbnail.</releaseNotes>
+    <dependencies>
+      <group targetFramework=".NETCoreApp1.0">
+        <dependency id="Microsoft.NETCore.App" version="1.0.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="GBXMapParser\bin\Debug\netcoreapp1.0\GBXMapParser.dll" target="lib\netcoreapp1.0\GBXMapParser.dll" />
+	<file src="LICENS*" target="" />
+  </files>
+</package>
