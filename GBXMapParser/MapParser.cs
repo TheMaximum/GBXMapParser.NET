@@ -15,7 +15,7 @@ namespace GBXMapParser
         /// <summary>
         /// Regular expression for stripping ManiaPlanet styling from a string.
         /// </summary>
-        private const string REGEX_STRIP_STYLING = "\\$(?:[0-9a-f][^$][^$]|[woisz]|[hlp](.*?)(?:\\[.*?\\](.*?))*(?:\\$[hlp]|))";
+        private const string REGEX_STRIP_STYLING = "(\\$[wnoitsgz<>]|\\$[lh]\\[.+\\]|\\$[lh]|\\$[0-9a-fA-F]{3})";
 
         /// <summary>
         /// Options for the regular expression.
