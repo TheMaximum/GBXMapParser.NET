@@ -34,6 +34,7 @@ MapInformation map = MapParser.ReadStream(stream);
 The following information is being parsed (check out the example for a clearer picture):
 * ``UId`` (``string``): map unique identifier;
 * ``Name`` (``string``): name of the map (with styling);
+* ``NameStripped`` (``string``): name of the map (without styling);
 * ``AuthorLogin`` (``string``): login of the author;
 * ``TitleId`` (``string``): title in which the map is created (e.g. ``TMCanyon`` or ``SMStorm``);
 * ``Environment`` (``string``): environment of the map (e.g. ``Canyon``);
@@ -54,7 +55,8 @@ The following information is being parsed (check out the example for a clearer p
 * ``SilverTime`` (``uint``): silver time in milliseconds;
 * ``BronzeTime`` (``uint``): bronze time in milliseconds;
 * ``AuthorVersion`` (``uint``): author version;
-* ``AuthorNickName`` (``string``): nickname of the author at time of validation;
+* ``AuthorNickName`` (``string``): nickname of the author at time of validation (with styling);
+* ``AuthorNickNameStripped`` (``string``): nickname of the author at time of validation (without styling);
 * ``AuthorZone`` (``string``): zone of the author at time of validation;
 * ``AuthorExtra`` (``string``);
 * ``HeaderXml`` (``string``): header information as XML string (**does not contain all data!**);

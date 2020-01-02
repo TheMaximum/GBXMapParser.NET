@@ -7,9 +7,9 @@
     <authors>Max Klaversma</authors>
     <owners>Max Klaversma</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
     <projectUrl>https://github.com/TheMaximum/GBXMapParser.NET</projectUrl>
     <iconUrl>https://smurfen.net/img/maniaplanet_tools.png</iconUrl>
-	<licenseUrl>https://github.com/TheMaximum/GBXMapParser.NET/blob/master/LICENSE</licenseUrl>
     <description>ManiaPlanet GBX map parser written in C# for .NET Core.</description>
 	<summary>Parser for ManiaPlanet maps (in GBX format), created in C# for .NET Core.</summary>
     <copyright>2019 © Max Klaversma</copyright>
