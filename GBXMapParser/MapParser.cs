@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace GBXMapParser
 {
@@ -11,6 +12,16 @@ namespace GBXMapParser
     /// </summary>
     public static class MapParser
     {
+        /// <summary>
+        /// Regular expression for stripping ManiaPlanet styling from a string.
+        /// </summary>
+        private const string REGEX_STRIP_STYLING = "\\$(?:[0-9a-f][^$][^$]|[woisz]|[hlp](.*?)(?:\\[.*?\\](.*?))*(?:\\$[hlp]|))";
+
+        /// <summary>
+        /// Options for the regular expression.
+        /// </summary>
+        private static RegexOptions regexOptions = RegexOptions.IgnoreCase;
+
         /// <summary>
         /// Current map information object to fill.
         /// </summary>
@@ -185,6 +196,7 @@ namespace GBXMapParser
             currentMapInformation.Environment = StreamReader.ReadLookbackString(stream);
             currentMapInformation.AuthorLogin = StreamReader.ReadLookbackString(stream);
             currentMapInformation.Name = StreamReader.ReadString(stream);
+            currentMapInformation.NameStripped = Regex.Replace(currentMapInformation.Name, REGEX_STRIP_STYLING, "", regexOptions);
 
             // Skip 5 bytes for the next bit of content.
             stream.Seek(5, SeekOrigin.Current);
@@ -257,6 +269,7 @@ namespace GBXMapParser
             string authorLogin = StreamReader.ReadString(stream);
 
             currentMapInformation.AuthorNickName = StreamReader.ReadString(stream);
+            currentMapInformation.AuthorNickNameStripped = Regex.Replace(currentMapInformation.AuthorNickName, REGEX_STRIP_STYLING, "", regexOptions);
             currentMapInformation.AuthorZone = StreamReader.ReadString(stream);
             currentMapInformation.AuthorExtra = StreamReader.ReadString(stream);
         }

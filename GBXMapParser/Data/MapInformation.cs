@@ -18,6 +18,11 @@
         public string Name { get; set; }
 
         /// <summary>
+        /// Map name stripped of ManiaPlanet styling.
+        /// </summary>
+        public string NameStripped { get; set; }
+
+        /// <summary>
         /// Author login.
         /// </summary>
         public string AuthorLogin { get; set; }
@@ -129,6 +134,11 @@
         /// Nickname of the author at time of map creation.
         /// </summary>
         public string AuthorNickName { get; set; }
+
+        /// <summary>
+        /// Nickname of the author stripped of ManiaPlanet styling.
+        /// </summary>
+        public string AuthorNickNameStripped { get; set; }
 
         /// <summary>
         /// Zone of the author at time of map creation.
